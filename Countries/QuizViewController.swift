@@ -21,7 +21,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var highestScoreLabel: UILabel!
     
-    let testCommit = "aaa"
+    let testCommit2 = "aaa"
     
     
     var score = 0 {
@@ -109,18 +109,22 @@ class QuizViewController: UIViewController {
         answerButton0.layer.cornerRadius = answerButton0.frame.height / 2
         answerButton0.layer.backgroundColor = UIColor(patternImage: UIImage(named: "answer.jpg")!).cgColor
         answerButton0.isHidden = true
+        answerButton0.setTitleColor(UIColor.black, for: .normal)
         
         answerButton1.layer.cornerRadius = answerButton0.layer.cornerRadius
         answerButton1.layer.backgroundColor = answerButton0.layer.backgroundColor
         answerButton1.isHidden = true
+        answerButton1.setTitleColor(UIColor.black, for: .normal)
 
         answerButton2.layer.cornerRadius = answerButton0.layer.cornerRadius
         answerButton2.layer.backgroundColor = answerButton0.layer.backgroundColor
         answerButton2.isHidden = true
+        answerButton2.setTitleColor(UIColor.black, for: .normal)
 
         answerButton3.layer.cornerRadius = answerButton0.layer.cornerRadius
         answerButton3.layer.backgroundColor = answerButton0.layer.backgroundColor
         answerButton3.isHidden = true
+        answerButton3.setTitleColor(UIColor.black, for: .normal)
         
     }
     

@@ -186,8 +186,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Afv-U9-DO2"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonPressed:" destination="fhY-dr-xh0" eventType="touchUpInside" id="MPe-jY-XgU"/>
                                 </connections>
@@ -208,8 +208,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="5dc-oT-03d"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonPressed:" destination="fhY-dr-xh0" eventType="touchUpInside" id="72B-ad-2Ms"/>
                                 </connections>
@@ -219,8 +219,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="IIO-Tf-k6z"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonPressed:" destination="fhY-dr-xh0" eventType="touchUpInside" id="TZQ-Xz-3nf"/>
                                 </connections>
@@ -230,8 +230,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="HFc-6h-dTd"/>
                                 </constraints>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="answerButtonPressed:" destination="fhY-dr-xh0" eventType="touchUpInside" id="wHb-e0-e4t"/>
                                 </connections>
