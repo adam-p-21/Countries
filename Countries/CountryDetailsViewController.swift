@@ -9,11 +9,13 @@ import UIKit
 
 class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
+    
     @IBOutlet weak var bottomTableView: UITableView!
 
     var country: Country!
     
-//MARK: - ViewDidLoad
+
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,14 +40,19 @@ class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITab
 
     }
     
+    
+    
 //MARK: - TableView methods
     
     func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
         let header = view as! UITableViewHeaderFooterView
         header.textLabel?.font = UIFont.boldSystemFont(ofSize: 13)
 //        header.textLabel?.textAlignment = NSTextAlignment.right
         header.textLabel?.textColor = .black
+        
     }
+    
     
     
     
@@ -55,13 +62,16 @@ class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITab
     
     
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
         
 
+    
         
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        
         let sectionName: String
 
             switch section {
@@ -81,7 +91,11 @@ class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITab
             }
             
             return sectionName
+        
     }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
     
@@ -90,8 +104,11 @@ class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITab
         } else {
             return 20
         }
+        
     }
 
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
@@ -125,4 +142,7 @@ class CountryDetailsViewController: UIViewController, UITableViewDelegate, UITab
     
       
     }
+    
+    
+    
 }

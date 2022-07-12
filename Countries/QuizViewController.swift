@@ -9,7 +9,7 @@ import UIKit
 
 class QuizViewController: UIViewController {
 
-    
+
     @IBOutlet weak var startQuizButton: UIButton!
     @IBOutlet weak var answerButton0: UIButton!
     @IBOutlet weak var answerButton1: UIButton!

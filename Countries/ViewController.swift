@@ -13,6 +13,7 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
     var searchedCountry = [Country]()
 
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,31 +25,21 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
 
         updateBarButtons(searchVisible: true, clearVisible: false)
 
-        
-        
-        
-        
         let backgroundImage = UIImage(named: "globe1.jpg")
         let imageView = UIImageView(image: backgroundImage)
         self.tableView.backgroundView = imageView
-
-
-
-
-
-
-
         
         tableView.separatorStyle = .none
-        
 
         getData(apiSuffix: "all")
 
-        
     }
 
     
+    
+    
     func updateBarButtons(searchVisible: Bool, clearVisible: Bool) {
+        
         let searchBarButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchTapped))
         let clearBarButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(clearTapped))
         
@@ -74,11 +65,10 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
     }
     
     
-    
-    
-    
+
 
     @objc func searchTapped() {
+        
         let ac = UIAlertController(title: "Search for country", message: "Type name of country", preferredStyle: .alert)
         ac.addTextField()
         ac.addAction(UIAlertAction(title: "Search", style: .default, handler: { UIAlertAction in
@@ -97,15 +87,19 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
         }))
         
         present(ac, animated: true)
+        
     }
     
     
     
+    
     @objc func clearTapped() {
+        
         searchedCountry.removeAll()
         getData(apiSuffix: "all")
         updateBarButtons(searchVisible: true, clearVisible: false)
         title = "List of all countries"
+        
     }
     
     
@@ -137,7 +131,9 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
     
     
     
+    
     func parse(json: Data) {
+        
         let decoder = JSONDecoder()
         
         if let jsonCountries = try? decoder.decode([Country].self, from: json) {
@@ -151,16 +147,22 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
         } else {
             print("blad3")
         }
+        
     }
     
     
+    
+    
+//MARK: - TableView methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
     }
     
+    
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "countryCell", for: indexPath) as! CountryTableViewCell
         
@@ -179,13 +181,14 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
         
         
         return cell
+        
     }
+   
     
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             if let vc = self.storyboard?.instantiateViewController(withIdentifier: "countryDetails") as? CountryDetailsViewController {
                 
@@ -196,5 +199,7 @@ class ViewController: UITableViewController, UITabBarControllerDelegate {
             }
         }
 
+    
+    
 }
 
