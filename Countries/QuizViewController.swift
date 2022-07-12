@@ -21,7 +21,7 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var timerLabel: UILabel!
     @IBOutlet weak var highestScoreLabel: UILabel!
     
-    let testCommit = "aaa"
+
     
     
     var score = 0 {
